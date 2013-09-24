@@ -1,5 +1,5 @@
 <h1>New Users</h1>
-<%= for_for @user do |f| %>
+<%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <ul>
       <% @user.errors.full_messages.each do |msg| %>
@@ -24,6 +24,6 @@
       <%= license_builder.label :state %><br>
       <%= license_builder.text_field :state %>
     </div>
-    <%= end %>
+    <% end %>
   <%= f.submit %>
 <% end %>
